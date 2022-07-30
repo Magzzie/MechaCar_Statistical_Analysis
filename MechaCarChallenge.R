@@ -38,4 +38,33 @@ lot_summary <- suspension_table %>% group_by(Manufacturing_Lot) %>%
 head(lot_summary)
 
 
+# 3. T-Tests on Suspension Coils 
+
+# Determine if the PSI across all manufacturing lots is statistically different from the population mean of 1,500 pounds per square inch.
+t.test((suspension_table$PSI), mu=mean(suspension_table$PSI))
+
+# Determine if the PSI for each manufacturing lot is statistically different from the population mean of 1,500 pounds per square inch.
+# lot 1
+t.test(subset(suspension_table$PSI, suspension_table$Manufacturing_Lot == "Lot1"), mu=mean(suspension_table$PSI))
+
+# lot 2
+t.test(subset(suspension_table$PSI, suspension_table$Manufacturing_Lot == "Lot2"), mu=mean(suspension_table$PSI))
+
+# lot 3
+t.test(subset(suspension_table$PSI, suspension_table$Manufacturing_Lot == "Lot3"), mu=mean(suspension_table$PSI))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
