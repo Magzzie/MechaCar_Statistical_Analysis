@@ -109,18 +109,18 @@ Collecting summary statistics on the pounds per square inch (PSI) of the suspens
 	- Median: 1500 
 	- Variance: 62.29356
 	- Standard Deviation: 7.892627 
-<br>
+
 	|![Suspension coil PSI Total Summary Stats.](./Images/suspension_table_summary_stats.png)|
 	|-|
 
 - Furthermore, we analyzed the distribution of suspension coil weights per manufacturing lot and the results were as follows: <br>
 
-	|---|:Manufacturing_Lot:|:Mean:|:Median:|:Variance:|:SD:|
-	|---|---|---|---|---|---|
-	|Lot1|:1500.00:|:1500.00:|:0.980:|:0.990:|
-	|Lot2|:1500.20:|1500.00:|:7.47:|:2.73:|
-	|Lot3|:1496.14:|:1498.5:|:170.29:|:13.05:|
-<br>
+	|Manufacturing_Lot|Mean|Median|Variance|SD|
+	|---|---|---|---|---|
+	|**Lot 1**|1500.00|1500.00|0.980|0.990|
+	|**Lot 2**|1500.20|1500.00|7.47|2.73|
+	|**Lot 3**|1496.14|1498.5|170.29|13.05|
+
 	|![Suspension coil PSI Summary Stats for Each Production Lot.](./Images/suspension_table_summary_stats_lots.png)|
 	|-|
 
