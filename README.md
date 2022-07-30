@@ -159,7 +159,6 @@ comparing a sample to the population.
 	|![One Sample T-Test of PSI - Lot 1 vs. Population](./Images/one_sample_t_test_lot1.png)|
 	|-|
 	|![One Sample T-Test of PSI - Lot 2 vs. Population](./Images/one_sample_t_test_lot2.png)|
-	|-|
 	|![One Sample T-Test of PSI - Lot 3 vs. Population](./Images/one_sample_t_test_lot3.png)|
 
 	
