@@ -33,8 +33,9 @@ In addition, we will use critical thinking skills to propose a robust study desi
 ## Resources
 - Data source: [MechaCar MPG dataset](https://github.com/Magzzie/MechaCar_Statistical_Analysis/blob/main/Resources/MechaCar_mpg.csv), [Suspension Coil dataset](https://github.com/Magzzie/MechaCar_Statistical_Analysis/blob/main/Resources/Suspension_Coil.csv)
 - Software: R (4.2.0), RStudio (2022.07.1-544)
-- Libraries & Packages: tidyverse (1.3.1), jsonlite (1.8.0), ggplot2 (3.3.6), ANOVA	,
-- Online Tools: 
+- Libraries & Packages: tidyverse (1.3.1), jsonlite (1.8.0), ggplot2 (3.3.6), Multiple Linear Regression
+- Online Tools: [MechaCar_Statistical_Analysis GitHub Repository](https://github.com/Magzzie/MechaCar_Statistical_Analysis)
+
 
 
 ## Methods
@@ -49,8 +50,11 @@ In addition, we will use critical thinking skills to propose a robust study desi
 	- Chi-squared test
 	- A/B and A/A testing characteristics
 	- Determination of the most appropriate statistical test for a given hypothesis and dataset. 
-
-
+-  Using R, we designed a multiple linear regression model that predicts the mpg of MechaCar prototypes using several variables from the MechaCar_mpg.csv file. 
+	- We ran the multiple linear regression R function (lm()) on all six variables:
+		- The indpendent variables being:  vehicle length, vehicle weight, spoiler angle, drivetrain, and ground clearance.
+		- The dependent variable being: mpg.
+- Then, using the summary() function, we determined the p-value and the r-squared value for the multiple linear regression model.
 
 
 
@@ -59,6 +63,36 @@ In addition, we will use critical thinking skills to propose a robust study desi
 
 1. Perform multiple linear regression analysis to identify which variables in the dataset predict the mpg of MechaCar prototypes.
 
+- The MechaCar_mpg.csv dataset contains mpg test results for 50 prototype MechaCars.
+- The MechaCar prototypes were produced using multiple design specifications to identify ideal vehicle performance.
+- Multiple metrics, such as vehicle length, vehicle weight, spoiler angle, drivetrain (AWD), and ground clearance, were collected for each vehicle. <br>
+
+	|![A View of Mecha Cars MPG Dataset.](./Images/mpg_head.png)|
+	|-|
+
+- Using our knowledge of R, we designed a linear model that predicts the mpg of MechaCar prototypes using several variables from the MechaCar_mpg.csv file. <br>
+	- The output of multiple linear regression using the lm() function produces the coefficients for each variable in the linear equation.
+	- The values of coefficients from the model equation were as follows: <br>
+	mpg = 6.267e+00 vehicle_length + 1.245e-03 vehicle_weight + 6.877e-02 spoiler_angle + 3.546e+00 ground_clearance + -3.411e+00 AWD + -1.040e+02 (intercept)
+	- If we translate the numbers from scientific notifications to standard numbers and round to the nearest hundredth , we find that the results were as follows: 
+	mpg = 6.27 vehicle_length + 0.00 vehicle_weight + 0.07 spoiler_angle + 3.55 ground_clearance + -3.41 AWD + -104.00 <br>
+
+	|![Multiple Linear Regression on Six Variables](./Images/mlr_6.png)|
+	|-|
+
+- To determine which variables provided a significant contribution to the linear model, we looked at the individual variable p-values.
+	- Each Pr(>|t|) value represents the probability that each coefficient contributes a random amount of variance to the linear model.
+	- According to our results, vehicle length and ground clearance (as well as intercept) are statistically unlikely to provide random amounts of variance to the linear model. 
+	- That means the vehicle length and ground clearance have a significant impact on Mile-Per_Gallon fuel efficincy metric.
+	- We notice that the intercept is statistically significant.
+	- That means that the intercept term explains a significant amount of variability in the dependent variable when all independent vairables are equal to zero. 
+	- Depending on our dataset, a significant intercept could mean that the significant features (such as vehicle length and ground clearance) may need scaling or transforming to help improve the predictive power of the model.
+	- It could also mean that there are other variables that can help explain the variability of our dependent variable that have not been included in our model. <br>
+	- The overall R-Sqaured of the MLR model was 0.72 (Multiple R-squared:  0.7149) and the p-Value was very small 5.35 × 10-11 or 0.00 (p-value: 5.35e-11)
+	- Based on our calculated p-value and r-squared value, we have determined that there is a significant relationship between vehicle length, ground clearance and fuel efficiency of the MechaCar prototypes. <br>
+
+	|![Summary Stats Showing p-value and r-sqaured for MLR on Six Variables.](./Images/mlr_6_summary_stats.png)|
+	|-|
 
 2. Collect summary statistics on the pounds per square inch (PSI) of the suspension coils from the manufacturing lots.
 
