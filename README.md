@@ -33,8 +33,9 @@ In addition, we will use critical thinking skills to propose a robust study desi
 ## Resources
 - Data source: [MechaCar MPG dataset](https://github.com/Magzzie/MechaCar_Statistical_Analysis/blob/main/Resources/MechaCar_mpg.csv), [Suspension Coil dataset](https://github.com/Magzzie/MechaCar_Statistical_Analysis/blob/main/Resources/Suspension_Coil.csv)
 - Software: R (4.2.0), RStudio (2022.07.1-544)
-- Libraries & Packages: tidyverse (1.3.1), jsonlite (1.8.0), ggplot2 (3.3.6), ANOVA	,
-- Online Tools: 
+- Libraries & Packages: tidyverse (1.3.1), jsonlite (1.8.0), ggplot2 (3.3.6), Multiple Linear Regression
+- Online Tools: [MechaCar_Statistical_Analysis GitHub Repository](https://github.com/Magzzie/MechaCar_Statistical_Analysis)
+
 
 
 ## Methods
