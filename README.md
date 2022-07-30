@@ -11,21 +11,27 @@ Therefore, the analytics team must ensure that their analyses contain a statisti
 
 Additionally, the AutosRUs data team consists of five members who prefer to program using R.
 
-This project will perform statistical tests using the R programming language. 
-We will provide summary statistics for different variables, visualizations for different datasets, and an interpretation of statistical test results. 
-In addition, we will use critical thinking skills to propose a robust study design, hypothesis, and analysis workflow to enhance the AutosRUs manufacturing process.
+More specifically, AutosRUs’ newest prototype, the MechaCar, is suffering from production troubles that are blocking the manufacturing team’s progress.
+AutosRUs’ upper management has requested a review of the production data for insights that may help the manufacturing team.
 
 
 ### Purpose
 
 
+This project will perform statistical tests using the R programming language. 
+We will provide summary statistics for different variables, visualizations for different datasets, and an interpretation of statistical test results. 
+In addition, we will use critical thinking skills to propose a robust study design, hypothesis, and analysis workflow to enhance the AutosRUs manufacturing process.
+
+
 ## Objectives
-
-
+1. Linear Regression to Predict MPG
+2. Deliverable 2: Summary Statistics on Suspension Coils
+3. T-Test on Suspension Coils
+4. Design a Study Comparing the MechaCar to the Competition
 
 
 ## Resources
-- Data source: 
+- Data source: [MechaCar MPG dataset](), [Suspension Coil dataset]()
 - Software: R (4.2.0), RStudio (2022.07.1-544)
 - Libraries & Packages: tidyverse (1.3.1), jsonlite (1.8.0), ggplot2 (3.3.6), ANOVA	,
 - Online Tools: 
@@ -43,7 +49,7 @@ In addition, we will use critical thinking skills to propose a robust study desi
 	- Chi-squared test
 	- A/B and A/A testing characteristics
 	- Determination of the most appropriate statistical test for a given hypothesis and dataset. 
-- 
+
 
 
 
@@ -51,6 +57,17 @@ In addition, we will use critical thinking skills to propose a robust study desi
 
 ## Results
 
+1. Perform multiple linear regression analysis to identify which variables in the dataset predict the mpg of MechaCar prototypes.
+
+
+2. Collect summary statistics on the pounds per square inch (PSI) of the suspension coils from the manufacturing lots.
+
+
+3. Run t-tests to determine if the manufacturing lots are statistically different from the mean population.
+
+
+4. Design a statistical study to compare vehicle performance of the MechaCar vehicles against vehicles from other manufacturers.
+- write a summary interpretation of the findings for each statistical analysis. 
 
 
 
