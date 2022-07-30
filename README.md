@@ -55,22 +55,24 @@ In addition, we will use critical thinking skills to propose a robust study desi
 		- The indpendent variables being:  vehicle length, vehicle weight, spoiler angle, drivetrain, and ground clearance.
 		- The dependent variable being: mpg.
 - Then, using the summary() function, we determined the p-value and the r-squared value for the multiple linear regression model.
-
+- To assess the production lots performance, we evaluated the weights of suspension coils produced by each lot. 
+- Using R, we created a summary statistics table to show:
+	- The suspension coil’s PSI continuous variable across all manufacturing lots. 
+	- The following PSI metrics for each lot: mean, median, variance, and standard deviation.
 
 
 
 ## Results
-
-1. Perform multiple linear regression analysis to identify which variables in the dataset predict the mpg of MechaCar prototypes.
-
+### Linear Regression to Predict MPG
+Performing multiple linear regression analysis to identify which variables in the dataset predict the mpg of MechaCar prototypes:<br>
 - The MechaCar_mpg.csv dataset contains mpg test results for 50 prototype MechaCars.
 - The MechaCar prototypes were produced using multiple design specifications to identify ideal vehicle performance.
 - Multiple metrics, such as vehicle length, vehicle weight, spoiler angle, drivetrain (AWD), and ground clearance, were collected for each vehicle. <br>
 
-	|![A View of Mecha Cars MPG Dataset.](./Images/mpg_head.png)|
-	|-|
+	|![A View of Mecha Cars MPG Dataset.](./Images/mpg_head.png)|![MechaCar mpg Table](./Images/mechacar_mpg_table.png)|
+	|-|-|
 
-- Using our knowledge of R, we designed a linear model that predicts the mpg of MechaCar prototypes using several variables from the MechaCar_mpg.csv file. <br>
+- Using R, we designed a linear model that predicts the mpg of MechaCar prototypes using several variables from the MechaCar_mpg.csv file. <br>
 	- The output of multiple linear regression using the lm() function produces the coefficients for each variable in the linear equation.
 	- The values of coefficients from the model equation were as follows: <br>
 	mpg = 6.267e+00 vehicle_length + 1.245e-03 vehicle_weight + 6.877e-02 spoiler_angle + 3.546e+00 ground_clearance + -3.411e+00 AWD + -1.040e+02 (intercept)
@@ -86,15 +88,48 @@ In addition, we will use critical thinking skills to propose a robust study desi
 	- That means the vehicle length and ground clearance have a significant impact on Mile-Per_Gallon fuel efficincy metric.
 	- We notice that the intercept is statistically significant.
 	- That means that the intercept term explains a significant amount of variability in the dependent variable when all independent vairables are equal to zero. 
-	- Depending on our dataset, a significant intercept could mean that the significant features (such as vehicle length and ground clearance) may need scaling or transforming to help improve the predictive power of the model.
+	- Based on our dataset, a significant intercept could mean that the significant features (such as vehicle length and ground clearance) may need scaling or transforming to help improve the predictive power of the model.
 	- It could also mean that there are other variables that can help explain the variability of our dependent variable that have not been included in our model. <br>
-	- The overall R-Sqaured of the MLR model was 0.72 (Multiple R-squared:  0.7149) and the p-Value was very small 5.35 × 10-11 or 0.00 (p-value: 5.35e-11)
+	- The overall R-Sqaured of the MLR model was 0.72 (Multiple R-squared:  0.7149) and the p-Value was very small 5.35 × 10-11 or < 0.001 (p-value: 5.35e-11)
 	- Based on our calculated p-value and r-squared value, we have determined that there is a significant relationship between vehicle length, ground clearance and fuel efficiency of the MechaCar prototypes. <br>
 
 	|![Summary Stats Showing p-value and r-sqaured for MLR on Six Variables.](./Images/mlr_6_summary_stats.png)|
 	|-|
 
-2. Collect summary statistics on the pounds per square inch (PSI) of the suspension coils from the manufacturing lots.
+### Summary Statistics on Suspension Coils
+Collecting summary statistics on the pounds per square inch (PSI) of the suspension coils from the manufacturing lots: <br>
+- The MechaCar Suspension_Coil.csv dataset contains the results from multiple production lots.
+- In this dataset, the weight capacities of multiple suspension coils were tested to determine if the manufacturing process is consistent across production lots.
+
+	|![Suspension Coil PSI Dataset](./Images/suspension_table_head.png)|![Suspension Coil PSI Table](./Images/suspension_table.png)|
+	|-|-|
+
+- Summary statistics for all the weights of suspension coild produces by all lots were as follows: 
+	- Mean: 1498.78
+	- Median: 1500 
+	- Variance: 62.29356
+	- Standard Deviation: 7.892627 
+<br>
+	|![Suspension coil PSI Total Summary Stats.](./Images/suspension_table_summary_stats.png)|
+	|-|
+
+- Furthermore, we analyzed the distribution of suspension coil weights per manufacturing lot and the results were as follows: <br>
+
+	|---|:Manufacturing_Lot:|:Mean:|:Median:|:Variance:|:SD:|
+	|---|---|---|---|---|---|
+	|Lot1|:1500.00:|:1500.00:|:0.980:|:0.990:|
+	|Lot2|:1500.20:|1500.00:|:7.47:|:2.73:|
+	|Lot3|:1496.14:|:1498.5:|:170.29:|:13.05:|
+<br>
+	|![Suspension coil PSI Summary Stats for Each Production Lot.](./Images/suspension_table_summary_stats_lots.png)|
+	|-|
+
+- The design specifications for the MechaCar suspension coils dictate that the variance of the suspension coils must not exceed 100 pounds per square inch.
+	- Based on our analysis of the overall production weights, we thought that all suspension coils produced for the protype had met the design requirement with a variance in weight capacities of 62.3. 
+	- Looking into the production records for each manufacturing lot separately showed that lots 1 & 2 were in adherence with design standards.
+	- However, lot 3 did not meet the requirements due to a variance of 170.3 in suspension coils PSI. 
+	
+
 
 
 3. Run t-tests to determine if the manufacturing lots are statistically different from the mean population.
