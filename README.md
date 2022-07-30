@@ -17,7 +17,7 @@ In addition, we will use critical thinking skills to propose a robust study desi
 
 
 ### Purpose
-
+Perform retrospective analysis of historical vehicle data. This means to compare results and metrics across different groups and factors using statistical tests. 
 
 ## Objectives
 
