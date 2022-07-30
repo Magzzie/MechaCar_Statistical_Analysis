@@ -59,6 +59,11 @@ In addition, we will use critical thinking skills to propose a robust study desi
 - Using R, we created a summary statistics table to show:
 	- The suspension coil’s PSI continuous variable across all manufacturing lots. 
 	- The following PSI metrics for each lot: mean, median, variance, and standard deviation.
+- Next, we ran t-tests to compare the distribution means of manufacturing lots in regards to the PSI of suspension coils to the population's mean of 1500.
+ 	- First, we compared all manufactures to the population using one-sample t-test.
+	- Next, we used the subset() argument to compare the mean of each manufacture lot separately to the population's, using one-sample t-test.
+
+
 
 
 
@@ -128,12 +133,36 @@ Collecting summary statistics on the pounds per square inch (PSI) of the suspens
 	- Based on our analysis of the overall production weights, we thought that all suspension coils produced for the protype had met the design requirement with a variance in weight capacities of 62.3. 
 	- Looking into the production records for each manufacturing lot separately showed that lots 1 & 2 were in adherence with design standards.
 	- However, lot 3 did not meet the requirements due to a variance of 170.3 in suspension coils PSI. 
+
+### T-Tests on Suspension Coils
+Running t-tests to determine if the manufacturing lots are statistically different from the mean population. <br>
+- To determine if all manufacturing lots and each lot individually were statistically different from the population mean of 1,500 pounds per square inch, <br>
+we ran a one-sample t-test where we compared all manufactures produced PSI mean to the population's mean.
+	- The null hypothesis (H0): There is no statistical difference between the observed sample mean and its presumed population mean. 
+	- The alternate hypothesis (Ha): There is a statistical difference between the observed sample mean and its presumed population mean. 
+	- Assuming our significance level was the common 0.05 percent, our p-value is above our significance level.
+	- Therefore, we do not have sufficient evidence to reject the null hypothesis, and we would state that the two means are statistically similar.
+
+	|![One Sample T-Test of PSI](./Images/one_sample_t_test_all.png)|
+	|-|
+
+- Then we compared the means of distribution for each lot separately against the population of manufactures mean using the one-sample t-test again since we would be <br>
+comparing a sample to the population. 
+	- Lot 1: the p-Value for the t-test was (1.57 x 10^-11) which reflected significant statistical difference. <br>
+	Hence, we reject the null hypothesis and conclude that there is a statistical difference between lot 1 mean and all manufactures mean. 
+	- Lot 2: the p-Value for the t-test was (0.0005911) which reflected significant statistical difference. <br>
+	Hence, we reject the null hypothesis and conclude that there is a statistical difference between lot 2 mean and all manufactures mean. 
+	- Lot 3: the p-Value for the t-test was (0.1589) which reflected **no** significant statistical difference. <br>
+	Hence, we fail to reject the null hypothesis and conclude that there is no statistical difference between lot 3 mean and all manufactures mean. 
+
+
+	|![One Sample T-Test of PSI - Lot 1 vs. Population](./Images/one_sample_t_test_lot1.png)|
+	|-|
+	|![One Sample T-Test of PSI - Lot 2 vs. Population](./Images/one_sample_t_test_lot2.png)|
+	|-|
+	|![One Sample T-Test of PSI - Lot 3 vs. Population](./Images/one_sample_t_test_lot3.png)|
+
 	
-
-
-
-3. Run t-tests to determine if the manufacturing lots are statistically different from the mean population.
-
 
 4. Design a statistical study to compare vehicle performance of the MechaCar vehicles against vehicles from other manufacturers.
 - write a summary interpretation of the findings for each statistical analysis. 
