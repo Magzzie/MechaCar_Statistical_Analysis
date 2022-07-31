@@ -163,8 +163,9 @@ comparing a sample to the population.
 
 ## Study Design: MechaCar vs. Competition
 	
-We propose a design of a statistical study to compare the vehicle performance of the MechaCar vehicles against vehicles from other manufacturers.
-- Background: Many aspects of a car's performance can be evaluated against manufacturers, including but not limited to <br>
+We propose a design of a statistical study to compare the market power of the MechaCar vehicles against vehicles from other manufacturers.
+- Background: While the MechaCar vehicle is still a prototype, we propose this market analysis study for future upgrades of the MechCar vehicle based on market value. <br>
+Many aspects of a car's performance can be evaluated against manufacturers, including but not limited to <br>
 the vehicle's cost, its fuel efficiency in cities and on highways, the horsepower of the engine, along with other metrics that could be influenced by both the car design and the consumer <br>
 such as the cost of yearly maintenance and the safety of the vehicle. 
 - Objective of the study: we intend to quantify how MechaCar performs against the competition in the marketplace.  
