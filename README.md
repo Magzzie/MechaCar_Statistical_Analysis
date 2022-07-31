@@ -33,23 +33,19 @@ In addition, we will use critical thinking skills to propose a robust study desi
 ## Resources
 - Data source: [MechaCar MPG dataset](https://github.com/Magzzie/MechaCar_Statistical_Analysis/blob/main/Resources/MechaCar_mpg.csv), [Suspension Coil dataset](https://github.com/Magzzie/MechaCar_Statistical_Analysis/blob/main/Resources/Suspension_Coil.csv)
 - Software: R (4.2.0), RStudio (2022.07.1-544)
-- Libraries & Packages: tidyverse (1.3.1), jsonlite (1.8.0), ggplot2 (3.3.6), Multiple Linear Regression
+- Libraries & Packages: tidyverse (1.3.1), dplyr (1.0.9).
 - Online Tools: [MechaCar_Statistical_Analysis GitHub Repository](https://github.com/Magzzie/MechaCar_Statistical_Analysis)
-
 
 
 ## Methods
 
 - Statistical Concepts applied: 
-	- ETL
-	- Visualizations: line, bar, scatter, boxplots, heatmaps.
 	- Data Distribution Characteristics
 	- Null and Alternative Hypothesis Testing
-	- Simple Linear Regression & Multiple Linear Regression
-	- One-sample t-Tests, two-sample t-Tests, and Analysis of Variance (ANOVA)
-	- Chi-squared test
-	- A/B and A/A testing characteristics
-	- Determination of the most appropriate statistical test for a given hypothesis and dataset. 
+	- Multiple Linear Regression
+	- One-sample t-Tests
+	- Determination of the most appropriate statistical test for a given hypothesis and dataset.
+ 
 -  Using R, we designed a multiple linear regression model that predicts the mpg of MechaCar prototypes using several variables from the MechaCar_mpg.csv file. 
 	- We ran the multiple linear regression R function (lm()) on all six variables:
 		- The independent variables are vehicle length, vehicle weight, spoiler angle, drivetrain, and ground clearance.
@@ -62,10 +58,6 @@ In addition, we will use critical thinking skills to propose a robust study desi
 - Next, we ran t-tests to compare the distribution means of manufacturing lots regarding the PSI of suspension coils to the population's mean of 1500.
  	- First, we compared all manufacturers to the population using a one-sample t-test.
 	- Next, we used the subset() argument to compare the mean of each manufacturing lot separately to the population's, using one-sample t-tests.
-
-
-
-
 
 ## Results
 ### Linear Regression to Predict MPG
